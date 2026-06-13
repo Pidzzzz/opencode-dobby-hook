@@ -24,7 +24,7 @@ jobs:
         id: setup-ndk
         uses: nttld/setup-ndk@v1
         with:
-          ndk-version: r27
+          ndk-version: r26
 
       - name: Apply Dobby patches
         run: bash ${GITHUB_WORKSPACE}/patches/apply_patches.sh ${GITHUB_WORKSPACE}/Dobby
