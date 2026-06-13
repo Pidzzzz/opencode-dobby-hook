@@ -34,7 +34,7 @@ jobs:
             -DCMAKE_TOOLCHAIN_FILE=${{ steps.setup-ndk.outputs.ndk-path }}/build/cmake/android.toolchain.cmake \
             -DANDROID_ABI=${{ matrix.abi }} \
             -DANDROID_PLATFORM=android-21 \
-            -DDOBBY_SOURCE_DIR=${GITHUB_WORKSPACE}/dobby \
+            -DDOBBY_SOURCE_DIR=${GITHUB_WORKSPACE}/Dobby \
             ${GITHUB_WORKSPACE}
 
       - name: Build
