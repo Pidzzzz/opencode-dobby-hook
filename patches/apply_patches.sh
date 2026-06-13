@@ -29,7 +29,7 @@ with open('common/os_arch_features.h', 'r') as f:
     content = f.read()
 
 # Remove circular include
-content = content.replace('#include \"PlatformUnifiedInterface/platform.h\"\n', '')
+content = content.replace('#include \"PlatformUnifiedInterface/platform.h\"\n', '#include <sys/mman.h>\n#include <unistd.h>\n')
 
 # Fix the make_memory_readable function body
 old_block = '''  auto page = (void *)ALIGN_FLOOR(address, OSMemory::PageSize());
