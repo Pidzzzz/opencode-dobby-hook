@@ -26,6 +26,11 @@ jobs:
         with:
           ndk-version: r27
 
+      - name: Apply Dobby patches
+        run: |
+          cd ${GITHUB_WORKSPACE}/Dobby
+          git apply ${GITHUB_WORKSPACE}/patches/001-fix-dobby-compile.patch
+
       - name: Configure CMake
         run: |
           mkdir -p build/${{ matrix.abi }}

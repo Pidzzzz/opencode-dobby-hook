@@ -32,8 +32,8 @@ static void dump_to_file(const char *filename, const char *data, int len) {
     ensure_dump_dir();
     char path[256];
     if (filename && strlen(filename) > 0) {
-        char *fname = strrchr(filename, '/');
-        fname = fname ? fname + 1 : (char *)filename;
+        const char *fname = strrchr(filename, '/');
+        fname = fname ? fname + 1 : filename;
         snprintf(path, sizeof(path), "/sdcard/cocos2js_dump/%s", fname);
     } else {
         snprintf(path, sizeof(path), "/sdcard/cocos2js_dump/script_%d.js", dump_count++);
