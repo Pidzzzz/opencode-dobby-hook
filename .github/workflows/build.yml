@@ -27,9 +27,7 @@ jobs:
           ndk-version: r27
 
       - name: Apply Dobby patches
-        run: |
-          cd ${GITHUB_WORKSPACE}/Dobby
-          git apply ${GITHUB_WORKSPACE}/patches/001-fix-dobby-compile.patch
+        run: bash ${GITHUB_WORKSPACE}/patches/apply_patches.sh ${GITHUB_WORKSPACE}/Dobby
 
       - name: Configure CMake
         run: |
