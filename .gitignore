@@ -1,0 +1,5 @@
+build/
+libs/
+*.so
+*.o
+*.a
