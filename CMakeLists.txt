@@ -17,7 +17,7 @@ target_include_directories(cocos2djs_hook PRIVATE
 )
 
 target_link_libraries(cocos2djs_hook
-    Dobby
+    dobby
     log
     dl
 )
